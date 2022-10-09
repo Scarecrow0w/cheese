@@ -3,35 +3,21 @@
 
   <header class="relative">
     <div class="container mx-auto">
-      <nav class="flex justify-between items-center -mt-20 sm:-mt-14">
+      <nav class="flex items-center justify-between -mt-20 sm:-mt-14">
         <!-- Logo -->
         <a
           href="#"
-          class="
-            flex flex-col
-            items-center
-            justify-center
-            -mt-8
-            -ml-8
-            sm:-ml-20
-          "
+          class="flex flex-col items-center justify-center -mt-8 -ml-8 sm:-ml-20"
         >
           <Logo />
           <div>
             <h3 class="-mt-8 font-black tracking-wider md:hidden">Сырный</h3>
-            <h3 class="-mt-2 ml-1 md:hidden">саммит</h3>
+            <h3 class="ml-1 -mt-2 md:hidden">саммит</h3>
           </div>
         </a>
         <!-- Navigation desktop -->
         <ul
-          class="
-            flex
-            gap-12
-            font-medium
-            text-xl text-secondary
-            lg:text-base
-            md:hidden
-          "
+          class="flex gap-12 text-xl font-medium text-secondary lg:text-base md:hidden"
         >
           <li>
             <a href="#news" class="hover:border-b-4 border-secondary"
@@ -70,70 +56,35 @@
           <li>
             <a
               href="#"
-              class="
-                block
-                py-4
-                text-darkbg
-                hover:scale-150 hover:text-lightbg
-                ease-in
-                duration-300
-              "
+              class="block py-4 duration-300 ease-in text-darkbg hover:scale-150 hover:text-lightbg"
               >About</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="
-                block
-                py-4
-                text-lightbg
-                hover:scale-150
-                ease-in
-                duration-300
-              "
+              class="block py-4 duration-300 ease-in text-lightbg hover:scale-150"
               >Services</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="
-                block
-                py-4
-                text-lightbg
-                hover:scale-150
-                ease-in
-                duration-300
-              "
+              class="block py-4 duration-300 ease-in text-lightbg hover:scale-150"
               >Case Studies</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="
-                block
-                py-4
-                text-lightbg
-                hover:scale-150
-                ease-in
-                duration-300
-              "
+              class="block py-4 duration-300 ease-in text-lightbg hover:scale-150"
               >Careers</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="
-                block
-                py-4
-                text-lightbg
-                hover:scale-150
-                ease-in
-                duration-300
-              "
+              class="block py-4 duration-300 ease-in text-lightbg hover:scale-150"
               >Blog</a
             >
           </li>
@@ -141,7 +92,7 @@
         <!-- Burger button -->
         <button
           @click.prevent="menuActive = !menuActive"
-          class="burger hidden md:block"
+          class="hidden burger md:block"
           :class="{ active: menuActive }"
         >
           <span class="burger-line top-line dark:bg-white"></span>
@@ -150,31 +101,14 @@
         </button>
       </nav>
       <!-- Section Hero -->
-      <section class="hero flex justify-start items-start flex-col">
+      <section class="flex flex-col items-start justify-start hero">
         <h3
-          class="
-            mt-10
-            font-black
-            text-2xl text-start text-secondary
-            mx-auto
-            lg:
-            md:text-lg
-            sm:text-sm
-          "
+          class="mx-auto mt-10 text-2xl font-black text-start text-secondary lg: md:text-lg sm:text-sm"
         >
           Лучшие российские сыровары и винные дома
         </h3>
         <h5
-          class="
-            mt-5
-            font-black
-            text-xl
-            max-w-xl
-            text-start text-secondary
-            mx-auto
-            md:text-base
-            sm:text-sm sm:mt-3
-          "
+          class="max-w-xl mx-auto mt-5 text-xl font-black text-start text-secondary md:text-base sm:text-sm sm:mt-3"
         >
           представляют ежегодный
         </h5>
@@ -193,16 +127,7 @@
           Сырный саммит
         </h1>
         <button
-          class="
-            bg-secondary
-            text-lightbg
-            px-6
-            py-3
-            rounded-lg
-            mx-auto
-            mt-5
-            hover:bg-hover
-          "
+          class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover"
         >
           Подробнее
         </button>
@@ -217,47 +142,33 @@
     </svg>
   </header>
   <main>
-    <section class="bg-mainbg container relative features">
+    <section class="container relative bg-mainbg features">
       <h3
-        class="
-          text-center
-          font-black
-          tracking-wider
-          text-3xl
-          max-w-2xl
-          text-secondary
-        "
+        class="max-w-2xl text-3xl font-black tracking-wider text-center text-secondary"
       >
         На прошедших саммитах
       </h3>
-      <div class="grid grid-cols-3 mt-14 sm:grid-cols-1 gap-10">
-        <div class="flex flex-col justify-center items-center">
+      <div class="grid grid-cols-3 gap-10 mt-14 sm:grid-cols-1">
+        <div class="flex flex-col items-center justify-center">
           <IconS1 class="md:w-[100px] sm:w-[70px] mx-auto" />
           <h5
-            class="font-black tracking-wider text-xl max-w-2xl text-secondary"
+            class="max-w-2xl text-xl font-black tracking-wider text-secondary"
           >
             более
           </h5>
           <p
-            class="font-black tracking-wider text-5xl max-w-2xl text-secondary"
+            class="max-w-2xl text-5xl font-black tracking-wider text-secondary"
           >
             100
           </p>
-          <p class="font-black tracking-wider text-xl max-w-2xl text-secondary">
+          <p class="max-w-2xl text-xl font-black tracking-wider text-secondary">
             сыроварен
           </p>
         </div>
         <div class="flex flex-col justify-center">
           <IconS2 class="md:w-[100px] sm:w-[70px] mx-auto" />
           <h3
-            class="
-              text-center
-              font-black
-              tracking-wider
-              text-3xl
-              max-w-2xl
-              text-secondary
-            "
+            class="max-w-2xl text-3xl font-black tracking-wider text-center text-secondary"
           >
             более 400 сортов сыра
           </h3>
@@ -265,15 +176,7 @@
         <div class="flex flex-col">
           <IconS3 class="md:w-[100px] sm:w-[70px] mx-auto" />
           <h3
-            class="
-              text-center
-              font-black
-              tracking-wider
-              text-3xl
-              max-w-2xl
-              text-secondary
-              mx-auto
-            "
+            class="max-w-2xl mx-auto text-3xl font-black tracking-wider text-center text-secondary"
           >
             более 200 рецептов сырных блюд
           </h3>
@@ -291,173 +194,79 @@
       </svg>
       <div class="container">
         <h3
-          class="
-            text-center
-            font-black
-            tracking-wider
-            text-3xl
-            max-w-2xl
-            text-secondary
-          "
+          class="max-w-2xl text-3xl font-black tracking-wider text-center text-secondary"
         >
           Новости наших партнеров
         </h3>
 
         <ul
-          class="
-            grid grid-cols-4 grid-rows-4
-            mt-5
-            sm:grid-cols-1
-            md:grid-cols-2
-            gap-4
-          "
+          class="grid grid-cols-4 grid-rows-4 gap-4 mt-5 sm:grid-cols-1 md:grid-cols-2"
         >
           <li
-            class="bg-lightbg relative rounded-lg shadow-lg col-span-1 hover:scale-105"
+            class="relative col-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105"
           >
             <a href="#"><div class="min-h-[200px]">
-              <div class="absolute bottom-0 h-1/3 w-full rounded-b-lg bg-secondary">
+              <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
           <h3 class="text-primary">Новости дня</h3></div>
             </div></a>
           </li>
           <li
-            class="
-              bg-lightbg
-              rounded-lg
-              shadow-lg
-              col-span-1
-              row-span-2
-              hover:scale-105
-              sm:row-span-1
-              relative
-            "
+            class="relative col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:row-span-1"
           >
             <a href="#"><div class="min-h-[200px]">
-              <div class="absolute bottom-0 h-1/3 w-full rounded-b-lg bg-secondary">
+              <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
           <h3 class="text-primary">Новости дня</h3></div>
             </div></a>
           </li>
           <li
-            class="bg-lightbg rounded-lg shadow-lg row-span-1 hover:scale-105"
+            class="row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105"
           >
             <a href="#"><div class="min-h-[200px]">3</div></a>
           </li>
           <li
-            class="
-              bg-lightbg
-              rounded-lg
-              shadow-lg
-              col-span-1
-              row-span-2
-              hover:scale-105
-            "
+            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105"
           >
             <a href="#"><div class="min-h-[200px]">4</div></a>
           </li>
           <li
-            class="
-              bg-lightbg
-              rounded-lg
-              shadow-lg
-              col-span-1
-              row-span-1
-              hover:scale-105
-              sm:hidden
-            "
+            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
           >
             <a href="#"><div class="min-h-[200px]">5</div></a>
           </li>
           <li
-            class="
-              bg-lightbg
-              rounded-lg
-              shadow-lg
-              col-span-1
-              row-span-2
-              hover:scale-105
-              sm:hidden
-            "
+            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
           >
             <a href="#"><div class="min-h-[200px]">6</div></a>
           </li>
           <li
-            class="
-              bg-lightbg
-              rounded-lg
-              shadow-lg
-              col-span-1
-              row-span-2
-              hover:scale-105
-              sm:hidden
-            "
+            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
           >
             <a href="#"><div class="min-h-[200px]">7</div></a>
           </li>
           <li
-            class="
-              bg-lightbg
-              rounded-lg
-              shadow-lg
-              col-span-1
-              row-span-1
-              hover:scale-105
-              sm:hidden
-            "
+            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
           >
             <a href="#"><div class="min-h-[200px]">8</div></a>
           </li>
           <li
-            class="
-              bg-lightbg
-              rounded-lg
-              shadow-lg
-              col-span-1
-              row-span-2
-              hover:scale-105
-              sm:hidden
-            "
+            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
           >
             <a href="#"><div class="min-h-[200px]">9</div></a>
           </li>
           <li
-            class="
-              bg-lightbg
-              rounded-lg
-              shadow-lg
-              col-span-1
-              row-span-1
-              hover:scale-105
-              sm:hidden
-            "
+            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
           >
             <a href="#"><div class="min-h-[200px]">10</div></a>
           </li>
           <li
-            class="
-              bg-lightbg
-              rounded-lg
-              shadow-lg
-              col-span-1
-              row-span-1
-              hover:scale-105
-              sm:hidden
-            "
+            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
           >
             <a href="#"><div class="min-h-[200px]">11</div></a>
           </li>
         </ul>
         <div class="flex justify-center mt-3">
           <button
-            class="
-              bg-secondary
-              text-lightbg
-              px-6
-              py-3
-              rounded-lg
-              mx-auto
-              mt-5
-              hover:bg-hover
-            "
+            class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover"
           >
             Все новости
           </button>
@@ -465,7 +274,7 @@
       </div>
     </section>
     <!-- About -->
-    <section class="about bg-white" id="about">
+    <section class="bg-white about" id="about">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ff8500"
@@ -475,18 +284,11 @@
       </svg>
       <div class="container">
         <h3
-          class="
-            text-start
-            font-black
-            tracking-wider
-            text-3xl
-            max-w-2xl
-            text-secondary
-          "
+          class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary"
         >
           О проекте
         </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-1 mt-5">
+        <div class="grid grid-cols-2 mt-5 sm:grid-cols-1">
           <div class="p-10">
             <p>
               «Сырный Саммит» начался из-за впечатлений от путешествий. Друзья,
@@ -524,14 +326,7 @@
     <section id="history" class="bg-mainbg">
       <div class="container">
         <h3
-          class="
-            text-start
-            font-black
-            tracking-wider
-            text-3xl
-            max-w-2xl
-            text-secondary
-          "
+          class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary"
         >
           История сырных саммитов
         </h3>
@@ -549,18 +344,11 @@
     <section class="bg-darkbg">
       <div class="container">
         <h3
-          class="
-            text-start
-            font-black
-            tracking-wider
-            text-3xl
-            max-w-2xl
-            text-secondary
-          "
+          class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary"
         >
           СМИ о нас
         </h3>
-        <div class="screen flex justify-center">
+        <div class="flex justify-center screen">
           <SlideMedia />
         </div>
       </div>
@@ -574,18 +362,11 @@
     <section class="bg-white">
       <div class="container">
           <h3
-          class="
-            text-start
-            font-black
-            tracking-wider
-            text-3xl
-            max-w-2xl
-            text-secondary
-          "
+          class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary"
         >
           Связаться с нами
         </h3>
-        <div class="main-letter relative mx-auto top-24">
+        <div class="relative mx-auto main-letter top-24">
         <Contact />
         </div>
         <Icons />
@@ -600,8 +381,8 @@
       </path>
     </svg>
     <div class="container">
-       <div class="grid grid-cols-4 gap-8 py-8 px-6 md:grid-cols-2 text-xl">
-          <div class="flex justify-between items-center md:hidden">
+       <div class="grid grid-cols-4 gap-8 px-6 py-8 text-xl md:grid-cols-2">
+          <div class="flex items-center justify-between md:hidden">
           <!-- Logo -->
           <a
             href="#"
@@ -616,12 +397,12 @@
             <Logo />
             <div>
               <h3 class="-mt-8 font-black tracking-wider">Сырный</h3>
-              <h3 class="-mt-2 ml-1">саммит</h3>
+              <h3 class="ml-1 -mt-2">саммит</h3>
             </div>
           </a>
           </div>
           <div>
-              <h2 class="mb-6 font-bold text-xl">Навигация</h2>
+              <h2 class="mb-6 text-xl font-bold">Навигация</h2>
               <ul class="">
                   <li class="mb-4">
                       <a href="#" class="hover:border-b-4 border-secondary">Новости</a>
@@ -638,7 +419,7 @@
               </ul>
           </div>
           <div>
-              <h2 class="mb-6 font-bold text-xl">Наши партнеры</h2>
+              <h2 class="mb-6 text-xl font-bold">Наши партнеры</h2>
               <ul class="">
                   <li class="mb-4">
                       <a href="#" class="hover:border-b-4 border-secondary">Сыроварня "Новый свет"</a>
@@ -655,7 +436,7 @@
               </ul>
           </div>
           <div>
-            <h3 class="mb-6 font-bold text-xl">Наши контакты</h3>
+            <h3 class="mb-6 text-xl font-bold">Наши контакты</h3>
           </div>
         </div>
     </div>
@@ -663,7 +444,7 @@
     </footer>
     <!-- /Footer -->
   </main>
-  
+
 </template>
 
 <script>
@@ -691,12 +472,18 @@ export default {
     Slider,
     SlideMedia,
     Contact
-},
+  },
+  props: {
+    content: Object,
+  },
   data() {
     return {
       menuActive: false,
     };
   },
+  mounted() {
+    console.log(this.content);
+  }
 };
 </script>
 
@@ -709,7 +496,7 @@ footer {
       rgba(255, 186, 0, 0.7)
     ),
     url("../../images/bg-image.jpg") repeat;
-    
+
 }
 /* footer {
   height: 100vh;
@@ -800,9 +587,9 @@ footer {
 @media (min-width: 1020px) {
   .about-image {
     display: block;
-  } 
+  }
 }
-/* contact */ 
+/* contact */
 .main-letter {
 
   /* transform: rotateZ(5deg); */
