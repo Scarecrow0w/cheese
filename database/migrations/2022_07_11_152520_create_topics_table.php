@@ -15,8 +15,11 @@ return new class extends Migration
     {
         Schema::create('topics', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('image');
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('title')->nullable();
+            $table->text('content')->nullable();
+            $table->string('image')->nullable();
+            $table->string('type');
             $table->timestamps();
         });
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Topic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
@@ -20,8 +21,11 @@ class TopicController extends Controller
             'topics' => Topic::all()->map(function($topic) {
                 return [
                     'id' => $topic->id,
-                    'name' => $topic->name,
-                    'image' => asset('storage/'.$topic->image)
+                    'user_id' => $topic->user_id,
+                    'title' => $topic->title,
+                    'content' => $topic->content,
+                    'image' => asset('storage/'.$topic->image),
+                    'type' => $topic->type,
                 ];
             })
         ]);
@@ -44,16 +48,18 @@ class TopicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-
     {
-       
         $fileName = $request->image->store('topics');
-        
+
         Topic::create([
-            'name' => $request->input('name'),
-            'image' =>$fileName
+            'user_id' => Auth::user()->id,
+            'title' => $request->title,
+            'content' => $request->content,
+            'image' => $fileName,
+            'type' => $request->type,
         ]);
-        return redirect()->route('topics.index');
+
+        return to_route('topics.index');
     }
 
     /**
@@ -91,19 +97,24 @@ class TopicController extends Controller
     public function update(Request $request, Topic $topic)
     {
         $fileName = $topic->image;
+
         if ($request->file('image')) {
             $image = $request->file('image');
+
             $fileName = time().'_'.$image->getClientOriginalName();
-            $destinationPath = 'uploads';
-            $image->move($destinationPath,$fileName);
-           
+
+            $image->move('uploads', $fileName);
         }
+
         $topic->update([
-            'name' => $request->input('name'),
-            'image' => $fileName
-            
+            'user_id' => Auth::user()->id,
+            'title' => $request->title,
+            'content' => $request->content,
+            'image' => $fileName,
+            'type' => $request->type,
         ]);
-        return redirect()->route('topics.index');
+
+        return to_route('topics.index');
     }
 
     /**
@@ -114,10 +125,10 @@ class TopicController extends Controller
      */
     public function destroy(Topic $topic)
     {
-        
         Storage::delete($topic->image);
-        $topic->delete();
-        return redirect()->route('topics.index');
 
+        $topic->delete();
+
+        return to_route('topics.index');
     }
 }

@@ -199,69 +199,69 @@
           Новости наших партнеров
         </h3>
 
-        <ul
-          class="grid grid-cols-4 grid-rows-4 gap-4 mt-5 sm:grid-cols-1 md:grid-cols-2"
-        >
-          <li
-            class="relative col-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105"
-          >
-            <a href="#"><div class="min-h-[200px]">
-              <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
-          <h3 class="text-primary">Новости дня</h3></div>
-            </div></a>
+        <ul class="grid grid-cols-4 grid-rows-4 gap-4 mt-5 sm:grid-cols-1 md:grid-cols-2">
+          <li class="relative col-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105">
+            <a href="#">
+              <div class="min-h-[200px]">
+                <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                  <h3 class="text-primary">Новости дня</h3>
+                </div>
+              </div>
+            </a>
           </li>
-          <li
-            class="relative col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:row-span-1"
-          >
-            <a href="#"><div class="min-h-[200px]">
-              <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
-          <h3 class="text-primary">Новости дня</h3></div>
-            </div></a>
+          <li class="relative col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:row-span-1">
+            <a href="#">
+              <div class="min-h-[200px]">
+                <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                  <h3 class="text-primary">Новости дня</h3>
+                </div>
+              </div>
+            </a>
           </li>
-          <li
-            class="row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105"
-          >
-            <a href="#"><div class="min-h-[200px]">3</div></a>
+          <li class="row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105">
+            <a href="#">
+              <div class="min-h-[200px]">3</div>
+            </a>
           </li>
-          <li
-            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105"
-          >
-            <a href="#"><div class="min-h-[200px]">4</div></a>
+          <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105">
+            <a href="#">
+              <div class="min-h-[200px]">4</div>
+            </a>
           </li>
-          <li
-            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
-          >
-            <a href="#"><div class="min-h-[200px]">5</div></a>
+          <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+            <a href="#">
+              <div class="min-h-[200px]">5</div>
+            </a>
           </li>
-          <li
-            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
-          >
-            <a href="#"><div class="min-h-[200px]">6</div></a>
+          <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+            <a href="#">
+              <div class="min-h-[200px]">6</div>
+            </a>
           </li>
-          <li
-            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
-          >
-            <a href="#"><div class="min-h-[200px]">7</div></a>
+          <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+            <a href="#">
+              <div class="min-h-[200px]">7</div>
+            </a>
           </li>
-          <li
-            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
-          >
-            <a href="#"><div class="min-h-[200px]">8</div></a>
+          <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+            <a href="#">
+              <div class="min-h-[200px]">8</div>
+            </a>
           </li>
-          <li
-            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
-          >
-            <a href="#"><div class="min-h-[200px]">9</div></a>
+          <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+            <a href="#">
+              <div class="min-h-[200px]">9</div>
+            </a>
           </li>
-          <li
-            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
-          >
-            <a href="#"><div class="min-h-[200px]">10</div></a>
+          <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+            <a href="#">
+              <div class="min-h-[200px]">10</div>
+            </a>
           </li>
-          <li
-            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden"
-          >
-            <a href="#"><div class="min-h-[200px]">11</div></a>
+          <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+            <a href="#">
+              <div class="min-h-[200px]">11</div>
+            </a>
           </li>
         </ul>
         <div class="flex justify-center mt-3">
