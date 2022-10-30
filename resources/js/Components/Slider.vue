@@ -11,52 +11,31 @@
     }"
     :navigation="true"
     :modules="modules"
-    class="mySwiper"
-  >
+    class="mySwiper">
     <div class="parallax-bg bg-mainbg" data-swiper-parallax="-23%"></div>
-    <swiper-slide class="flex flex-col justify-center text-center">
+    <swiper-slide
+        v-for="story in summit_stories_titles"
+        :key="story.id"
+        class="flex flex-col justify-center text-center">
       <!-- <img src="../../images/photo_slider1.jpg" class="w-24" alt=""> -->
       <div class="title text-secondary" data-swiper-parallax="-300">
-        I Сырный саммит
+        {{ story.title }}
       </div>
-      <div class="subtitle text-secondary mt-3" data-swiper-parallax="-200">
-        Прошел в январе 2016 года
+      <div class="mt-3 text text-secondary" data-swiper-parallax="-100">
+        <p>{{ story.content }}</p>
       </div>
-      <div class="text text-secondary mt-3" data-swiper-parallax="-100">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-          laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-          Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-          Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper
-          velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut
-          libero. Aenean feugiat non eros quis feugiat.
-        </p>
-      </div>
-      <button
-        class="
-          bg-secondary
-          text-lightbg
-          px-6
-          py-3
-          rounded-lg
-          mx-auto
-          mt-5
-          hover:bg-hover
-        "
-      >
+      <button class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover" >
         Подробнее
       </button>
     </swiper-slide>
-    <swiper-slide class="flex flex-col justify-center text-center">
-      <!-- <img src="../../images/photo_slider1.jpg" class="w-24" alt=""> -->
+    <!-- <swiper-slide class="flex flex-col justify-center text-center">
       <div class="title text-secondary" data-swiper-parallax="-300">
         II Сырный саммит
       </div>
-      <div class="subtitle text-secondary mt-3" data-swiper-parallax="-200">
+      <div class="mt-3 subtitle text-secondary" data-swiper-parallax="-200">
         Прошел в январе 2016 года
       </div>
-      <div class="text text-secondary mt-3" data-swiper-parallax="-100">
+      <div class="mt-3 text text-secondary" data-swiper-parallax="-100">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
           dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
@@ -68,29 +47,19 @@
         </p>
       </div>
       <button
-        class="
-          bg-secondary
-          text-lightbg
-          px-6
-          py-3
-          rounded-lg
-          mx-auto
-          mt-5
-          hover:bg-hover
-        "
+        class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover"
       >
         Подробнее
       </button>
     </swiper-slide>
     <swiper-slide class="flex flex-col justify-center text-center">
-      <!-- <img src="../../images/photo_slider1.jpg" class="w-24" alt=""> -->
       <div class="title text-secondary" data-swiper-parallax="-300">
         III Сырный саммит
       </div>
-      <div class="subtitle text-secondary mt-3" data-swiper-parallax="-200">
+      <div class="mt-3 subtitle text-secondary" data-swiper-parallax="-200">
         Прошел в январе 2016 года
       </div>
-      <div class="text text-secondary mt-3" data-swiper-parallax="-100">
+      <div class="mt-3 text text-secondary" data-swiper-parallax="-100">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
           dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
@@ -102,29 +71,19 @@
         </p>
       </div>
       <button
-        class="
-          bg-secondary
-          text-lightbg
-          px-6
-          py-3
-          rounded-lg
-          mx-auto
-          mt-5
-          hover:bg-hover
-        "
+        class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover"
       >
         Подробнее
       </button>
     </swiper-slide>
     <swiper-slide class="flex flex-col justify-center text-center">
-      <!-- <img src="../../images/photo_slider1.jpg" class="w-24" alt=""> -->
       <div class="title text-secondary" data-swiper-parallax="-300">
         IV Сырный саммит
       </div>
-      <div class="subtitle text-secondary mt-3" data-swiper-parallax="-200">
+      <div class="mt-3 subtitle text-secondary" data-swiper-parallax="-200">
         Прошел в январе 2016 года
       </div>
-      <div class="text text-secondary mt-3" data-swiper-parallax="-100">
+      <div class="mt-3 text text-secondary" data-swiper-parallax="-100">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
           dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
@@ -136,29 +95,19 @@
         </p>
       </div>
       <button
-        class="
-          bg-secondary
-          text-lightbg
-          px-6
-          py-3
-          rounded-lg
-          mx-auto
-          mt-5
-          hover:bg-hover
-        "
+        class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover"
       >
         Подробнее
       </button>
     </swiper-slide>
     <swiper-slide class="flex flex-col justify-center text-center">
-      <!-- <img src="../../images/photo_slider1.jpg" class="w-24" alt=""> -->
       <div class="title text-secondary" data-swiper-parallax="-300">
         V Сырный саммит
       </div>
-      <div class="subtitle text-secondary mt-3" data-swiper-parallax="-200">
+      <div class="mt-3 subtitle text-secondary" data-swiper-parallax="-200">
         Прошел в январе 2016 года
       </div>
-      <div class="text text-secondary mt-3" data-swiper-parallax="-100">
+      <div class="mt-3 text text-secondary" data-swiper-parallax="-100">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
           dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
@@ -169,21 +118,10 @@
           libero. Aenean feugiat non eros quis feugiat.
         </p>
       </div>
-      <button
-        class="
-          bg-secondary
-          text-lightbg
-          px-6
-          py-3
-          rounded-lg
-          mx-auto
-          mt-5
-          hover:bg-hover
-        "
-      >
+      <button class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover">
         Подробнее
       </button>
-    </swiper-slide>
+    </swiper-slide> -->
   </swiper>
 </template>
 <script>
@@ -200,21 +138,24 @@ import "swiper/css/navigation";
 import { Parallax, Pagination, Navigation } from "swiper";
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    return {
-      modules: [Parallax, Pagination, Navigation],
-      pagination: {
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-      },
-    };
-  },
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    props: {
+        summit_stories_titles: Array,
+    },
+    setup() {
+        return {
+            modules: [Parallax, Pagination, Navigation],
+            pagination: {
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                }
+            }
+        };
+    },
 };
 </script>
 

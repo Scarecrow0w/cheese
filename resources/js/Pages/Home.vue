@@ -33,14 +33,14 @@
                 </ul>
                 <!-- Navigation mobile -->
                 <ul id="menu" class="
-            absolute
-            left-0
-            right-0
-            top-[130px]
-            bg-secondary
-            flex flex-col
-            items-center
-          " :class="{ hidden: !menuActive }">
+                    absolute
+                    left-0
+                    right-0
+                    top-[130px]
+                    bg-secondary
+                    flex flex-col
+                    items-center"
+                    :class="{ hidden: !menuActive }">
                     <li>
                         <a href="#"
                             class="block py-4 duration-300 ease-in text-darkbg hover:scale-150 hover:text-lightbg">About</a>
@@ -77,15 +77,14 @@
                     представляют ежегодный
                 </h5>
                 <h1 class="
-            font-black
-            tracking-wider
-            text-[100px]
-            max-w-2xl
-            text-center text-secondary
-            mx-auto
-            leading-none
-            md:text-5xl md:mt-4
-          ">
+                    font-black
+                    tracking-wider
+                    text-[100px]
+                    max-w-2xl
+                    text-center text-secondary
+                    mx-auto
+                    leading-none
+                    md:text-5xl md:mt-4">
                     Сырный саммит
                 </h1>
                 <button class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover">
@@ -265,7 +264,7 @@
                 <h3 class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary">
                     История сырных саммитов
                 </h3>
-                <Slider />
+                <Slider :summit_stories_titles="summit_stories_titles" />
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#ff8500" fill-opacity="1"
@@ -280,7 +279,7 @@
                     СМИ о нас
                 </h3>
                 <div class="flex justify-center screen">
-                    <SlideMedia />
+                    <SlideMedia :mass_media_about_us_titles="mass_media_about_us_titles" />
                 </div>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -314,12 +313,11 @@
                     <div class="flex items-center justify-between md:hidden">
                         <!-- Logo -->
                         <a href="#" class="
-              flex flex-col
-              items-center
-              justify-center
-              -mt-[300px]
-              -ml-8
-            ">
+                            flex flex-col
+                            items-center
+                            justify-center
+                            -mt-[300px]
+                            -ml-8">
                             <Logo />
                             <div>
                                 <h3 class="-mt-8 font-black tracking-wider">Сырный</h3>
@@ -400,15 +398,14 @@ export default {
         Contact
     },
     props: {
-        content: Object,
+        partners_news_titles: Array,
+        summit_stories_titles: Array,
+        mass_media_about_us_titles: Array,
     },
     data() {
         return {
             menuActive: false,
         };
-    },
-    mounted() {
-        console.log(this.content);
     }
 };
 </script>

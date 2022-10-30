@@ -37,7 +37,7 @@
                                     {{ topic.title }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    <img :src="topic.image" alt="topic_image" class="flex-shrink-0 w-12 h-12 rounded" />
+                                    <img v-if="topic.image" :src="topic.image" alt="topic_image" class="flex-shrink-0 w-12 h-12 rounded" />
                                 </td>
                                 <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
                                     {{ topic.content }}

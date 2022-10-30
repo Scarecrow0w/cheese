@@ -19,16 +19,19 @@
     :modules="modules"
     class="mySwiper"
   >
-    <swiper-slide class="flex justify-center text-center">
-      <img class="relative rounded-lg"
-        src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        <div class="absolute bottom-0 h-1/3 w-full rounded-b-lg bg-secondary">
-          <h3 class="text-primary">Новости дня</h3></div> 
-        </swiper-slide
-    ><swiper-slide class="flex justify-center text-center"
+    <swiper-slide v-for="slide in mass_media_about_us_titles"
+        :key="slide.id"
+        class="flex justify-center text-center">
+        <img class="relative rounded-lg"
+            :src="slide.image" />
+        <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+            <h3 class="text-primary">{{ slide.title }}</h3>
+        </div>
+    </swiper-slide >
+    <!-- <swiper-slide class="flex justify-center text-center"
       ><img class="rounded-lg"
         src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        <div class="absolute bottom-0 h-1/3 w-full rounded-b-lg bg-secondary">
+        <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
           <h3 class="text-primary">Новости дня</h3></div>
           </swiper-slide
     ><swiper-slide
@@ -51,7 +54,7 @@
         src="https://swiperjs.com/demos/images/nature-8.jpg" /></swiper-slide
     ><swiper-slide
       ><img src="https://swiperjs.com/demos/images/nature-9.jpg"
-    /></swiper-slide>
+    /></swiper-slide> -->
   </swiper>
 </template>
 <script>
@@ -73,6 +76,9 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+  },
+  props: {
+    mass_media_about_us_titles: Array,
   },
   setup() {
     return {

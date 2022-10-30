@@ -19,12 +19,16 @@ class TopicController extends Controller
     {
         return Inertia::render('Topics/Index', [
             'topics' => Topic::all()->map(function($topic) {
+                if ($topic->image && Storage::disk('public')->exists($topic->image)) {
+                    $image = asset('storage/'.$topic->image);
+                }
+
                 return [
                     'id' => $topic->id,
                     'user_id' => $topic->user_id,
                     'title' => $topic->title,
                     'content' => $topic->content,
-                    'image' => asset('storage/'.$topic->image),
+                    'image' =>  $image ?? null,
                     'type' => $topic->type,
                 ];
             })
@@ -49,13 +53,15 @@ class TopicController extends Controller
      */
     public function store(Request $request)
     {
-        $fileName = $request->file('image')->store('topics', 'public');
+        if ($request->file('image')) {
+            $fileName = $request->file('image')->store('topics', 'public');
+        }
 
         Topic::create([
             'user_id' => Auth::user()->id,
             'title' => $request->title,
             'content' => $request->content,
-            'image' => $fileName,
+            'image' => $fileName ?? null,
             'type' => $request->type,
         ]);
 
