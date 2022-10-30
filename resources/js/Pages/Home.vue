@@ -28,7 +28,7 @@
                         <a href="#" class="hover:border-b-4 border-secondary">Контакты</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:border-b-4 border-secondary">Войти</a>
+                        <a :href="route('login')" class="hover:border-b-4 border-secondary">Войти</a>
                     </li>
                 </ul>
                 <!-- Navigation mobile -->

@@ -12,8 +12,9 @@
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="flex justify-end p-2 m-2">
-                    <Link href="/topics/create" class="px-4 py-2 text-white bg-indigo-500 rounded hover:bg-indigo-600">
-                    Create</Link>
+                    <Link href="/dashboard/topics/create" class="px-4 py-2 text-white bg-indigo-500 rounded hover:bg-indigo-600">
+                        Создать
+                    </Link>
                 </div>
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -45,10 +46,10 @@
                                     {{ topic.type }}
                                 </td>
                                 <td class="px-6 py-4 text-right">
-                                    <Link :href="`/topics/${topic.id}/edit`" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                    <Link :href="`/dashboard/topics/${topic.id}/edit`" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                                         Редактировать
                                     </Link>
-                                    <Link :href="`/topics/${topic.id}`" method="delete" as="button" type="button" class="px-6 font-medium text-red-600 dark:text-blue-500 hover:underline">
+                                    <Link :href="`/dashboard/topics/${topic.id}`" method="delete" as="button" type="button" class="px-6 font-medium text-red-600 dark:text-blue-500 hover:underline">
                                         Удалить
                                     </Link>
                                 </td>

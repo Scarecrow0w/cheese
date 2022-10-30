@@ -16,7 +16,7 @@ const form = useForm({
 });
 
 function updateTopic() {
-    Inertia.post(`/topics/${props.topic.id}`, {
+    Inertia.post(`/dashboard/topics/${props.topic.id}`, {
         _method: 'put',
         title: form.title,
         content: form.content,
@@ -40,7 +40,7 @@ function updateTopic() {
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="flex justify-start p-2 m-2">
-                    <Link href="/topics/" class="px-4 py-2 text-white bg-indigo-500 rounded hover:bg-indigo-600">Back</Link>
+                    <Link href="/dashboard/topics/" class="px-4 py-2 text-white bg-indigo-500 rounded hover:bg-indigo-600">Назад</Link>
                 </div>
                 <form class="w-full max-w-sm" @submit.prevent="updateTopic">
                     <div class="mb-6 md:flex md:items-center">

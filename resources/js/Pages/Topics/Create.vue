@@ -10,7 +10,7 @@ const form = useForm({
 });
 
 function storeTopic() {
-    form.post("/topics");
+    form.post("/dashboard/topics");
 }
 </script>
 
@@ -28,8 +28,8 @@ function storeTopic() {
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="flex justify-start p-2 m-2">
-                <Link href="/topics/" class="px-4 py-2 text-white bg-indigo-500 rounded hover:bg-indigo-600">
-                    Back
+                <Link href="/dashboard/topics/" class="px-4 py-2 text-white bg-indigo-500 rounded hover:bg-indigo-600">
+                    Назад
                 </Link>
                 </div>
                 <form class="w-full max-w-sm" @submit.prevent="storeTopic">
