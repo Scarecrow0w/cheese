@@ -147,7 +147,7 @@
                         <a href="#">
                             <div class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
-                                    <h3 class="text-primary">Новости дня</h3>
+                                    <h3 class="text-primary">{{ partners_news_titles[0].title }}</h3>
                                 </div>
                             </div>
                         </a>
@@ -157,54 +157,54 @@
                         <a href="#">
                             <div class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
-                                    <h3 class="text-primary">Новости дня</h3>
+                                    <h3 class="text-primary">{{ partners_news_titles[1].title }}</h3>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li class="row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105">
                         <a href="#">
-                            <div class="min-h-[200px]">3</div>
+                            <div class="min-h-[200px]">{{ partners_news_titles[2].title }}</div>
                         </a>
                     </li>
                     <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105">
                         <a href="#">
-                            <div class="min-h-[200px]">4</div>
+                            <div class="min-h-[200px]">{{ partners_news_titles[3].title }}</div>
                         </a>
                     </li>
                     <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
                         <a href="#">
-                            <div class="min-h-[200px]">5</div>
+                            <div class="min-h-[200px]">{{ partners_news_titles[4].title }}</div>
                         </a>
                     </li>
                     <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
                         <a href="#">
-                            <div class="min-h-[200px]">6</div>
+                            <div class="min-h-[200px]">{{ partners_news_titles[5].title }}</div>
                         </a>
                     </li>
                     <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
                         <a href="#">
-                            <div class="min-h-[200px]">7</div>
+                            <div class="min-h-[200px]">{{ partners_news_titles[6].title }}</div>
                         </a>
                     </li>
                     <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
                         <a href="#">
-                            <div class="min-h-[200px]">8</div>
+                            <div class="min-h-[200px]">{{ partners_news_titles[7].title }}</div>
                         </a>
                     </li>
                     <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
                         <a href="#">
-                            <div class="min-h-[200px]">9</div>
+                            <div class="min-h-[200px]">{{ partners_news_titles[8].title }}</div>
                         </a>
                     </li>
                     <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
                         <a href="#">
-                            <div class="min-h-[200px]">10</div>
+                            <div class="min-h-[200px]">{{ partners_news_titles[9].title }}</div>
                         </a>
                     </li>
                     <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
                         <a href="#">
-                            <div class="min-h-[200px]">11</div>
+                            <div class="min-h-[200px]">{{ partners_news_titles[10].title }}</div>
                         </a>
                     </li>
                 </ul>
