@@ -30,10 +30,12 @@ use Inertia\Inertia;
 Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::get('/about', [IndexController::class, 'about'])->name('about');
 
-Route::resources([
-    '/topics' => TopicController::class,
-    '/users' => UserController::class,
-]);
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::resources([
+        '/topics' => TopicController::class,
+        '/users' => UserController::class,
+    ]);
+});
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

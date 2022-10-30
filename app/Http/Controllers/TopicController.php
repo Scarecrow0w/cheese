@@ -49,7 +49,7 @@ class TopicController extends Controller
      */
     public function store(Request $request)
     {
-        $fileName = $request->image->store('topics');
+        $fileName = $request->file('image')->store('topics', 'public');
 
         Topic::create([
             'user_id' => Auth::user()->id,
@@ -83,7 +83,7 @@ class TopicController extends Controller
     {
         return Inertia::render('Topics/Edit', [
             'topic' => $topic,
-            'image' => asset('uploads/'.$topic->image)
+            'image' => asset('storage/'.$topic->image)
         ]);
     }
 
@@ -99,11 +99,7 @@ class TopicController extends Controller
         $fileName = $topic->image;
 
         if ($request->file('image')) {
-            $image = $request->file('image');
-
-            $fileName = time().'_'.$image->getClientOriginalName();
-
-            $image->move('uploads', $fileName);
+            $fileName = $request->file('image')->store('topics', 'public');
         }
 
         $topic->update([
@@ -125,7 +121,7 @@ class TopicController extends Controller
      */
     public function destroy(Topic $topic)
     {
-        Storage::delete($topic->image);
+        Storage::delete('public/' . $topic->image);
 
         $topic->delete();
 
