@@ -30,7 +30,7 @@ class IndexController extends Controller
                 ];
             });
 
-        $summit_stories_titles = Topic::whereType('summit_stories   ')
+        $summit_stories_titles = Topic::whereType('summit_stories')
             ->latest()
             ->get()
             ->map(function($topic) {
