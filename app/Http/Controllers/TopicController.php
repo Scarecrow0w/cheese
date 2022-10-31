@@ -18,7 +18,7 @@ class TopicController extends Controller
     public function index()
     {
         return Inertia::render('Topics/Index', [
-            'topics' => Topic::all()->map(function($topic) {
+            'topics' => Topic::latest()->get()->map(function($topic) {
                 if ($topic->image && Storage::disk('public')->exists($topic->image)) {
                     $image = asset('storage/'.$topic->image);
                 }
