@@ -117,17 +117,29 @@
                             сыроварен
                         </p>
                     </div>
-                    <div class="flex flex-col justify-center">
+                    <div class="flex flex-col items-center justify-center">
                         <IconS2 class="h-[120px] sm:w-[70px] mx-auto" />
-                        <h3 class="max-w-2xl text-2xl font-black tracking-wider text-center text-secondary">
-                            более 400 сортов сыра
-                        </h3>
+                        <h5 class="max-w-2xl text-xl font-black tracking-wider text-secondary">
+                            более
+                        </h5>
+                        <p class="max-w-2xl text-4xl font-black tracking-wider text-secondary">
+                            400
+                        </p>
+                        <p class="max-w-2xl text-xl font-black tracking-wider text-secondary">
+                            сортов сыра
+                        </p>
                     </div>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col items-center justify-center">
                         <IconS3 class="h-[120px] sm:w-[70px] mx-auto" />
-                        <h3 class="max-w-2xl mx-auto text-2xl font-black tracking-wider text-center text-secondary">
-                            более 200 рецептов сырных блюд
-                        </h3>
+                        <h5 class="max-w-2xl text-xl font-black tracking-wider text-secondary">
+                            более
+                        </h5>
+                        <p class="max-w-2xl text-4xl font-black tracking-wider text-secondary">
+                            200
+                        </p>
+                        <p class="max-w-2xl text-xl font-black tracking-wider text-secondary">
+                            рецептов сырных блюд
+                        </p>
                     </div>
                 </div>
             </div>
