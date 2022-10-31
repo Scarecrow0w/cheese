@@ -11,10 +11,9 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $partners_news_titles = Topic::whereType('partners_news ')
+        $partners_news_titles = Topic::whereType('partners_news')
             ->latest()
-            ->take(11)
-            ->get()
+            ->paginate(11)
             ->map(function($topic) {
                 if ($topic->image && Storage::disk('public')->exists($topic->image)) {
                     $image = asset('storage/'.$topic->image);
@@ -48,7 +47,7 @@ class IndexController extends Controller
                 ];
             });
 
-        $mass_media_about_us_titles = Topic::whereType('mass_media_about_us ')
+        $mass_media_about_us_titles = Topic::whereType('mass_media_about_us')
             ->latest()
             ->get()
             ->map(function($topic) {

@@ -157,9 +157,10 @@
                         Новости наших партнеров
                     </h3>
 
-                    <ul class="grid grid-cols-4 grid-rows-4 gap-4 mt-5 sm:grid-cols-1 lg:grid-cols-2">
+                    <ul class="grid grid-cols-4 grid-rows-4 gap-4 mt-5 sm:grid-cols-1 lg:grid-cols-2 our-partners-news-list">
                         <li v-if="partners_news_titles[0]"
-                            class="relative col-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105">
+                            class="relative col-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105"
+                            :style="{ background: `url(${partners_news_titles[0].image}) center center no-repeat` }">
                             <a href="#">
                                 <div class="min-h-[200px]">
                                     <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
@@ -169,7 +170,8 @@
                             </a>
                         </li>
                         <li v-if="partners_news_titles[1]"
-                            class="relative col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:row-span-1">
+                            class="relative col-span-1 row-span-2 rounded-lg shadow-lg hover:scale-105 sm:row-span-1"
+                            :style="{ background: `url(${partners_news_titles[1].image}) center center no-repeat` }">
                             <a href="#">
                                 <div class="min-h-[200px]">
                                     <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
@@ -179,63 +181,109 @@
                             </a>
                         </li>
                         <li v-if="partners_news_titles[2]"
-                            class="row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105">
+                            class="relative row-span-1 rounded-lg shadow-lg hover:scale-105"
+                            :style="{ background: `url(${partners_news_titles[2].image}) center center no-repeat` }">
                             <a href="#">
-                                <div class="min-h-[200px]">{{ partners_news_titles[2].title }}</div>
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[2].title }}</h3>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li v-if="partners_news_titles[3]"
-                            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105">
+                            class="relative col-span-1 row-span-2 rounded-lg shadow-lg hover:scale-105"
+                            :style="{ background: `url(${partners_news_titles[3].image}) center center no-repeat` }">
                             <a href="#">
-                                <div class="min-h-[200px]">{{ partners_news_titles[3].title }}</div>
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[3].title }}</h3>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li v-if="partners_news_titles[4]"
-                            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            class="relative col-span-1 row-span-1 rounded-lg shadow-lg hover:scale-105 sm:hidden"
+                            :style="{ background: `url(${partners_news_titles[4].image}) center center no-repeat` }">
                             <a href="#">
-                                <div class="min-h-[200px]">{{ partners_news_titles[4].title }}</div>
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[4].title }}</h3>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li v-if="partners_news_titles[5]"
-                            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            class="relative col-span-1 row-span-2 rounded-lg shadow-lg hover:scale-105 sm:hidden"
+                            :style="{ background: `url(${partners_news_titles[5].image}) center center no-repeat` }">
                             <a href="#">
-                                <div class="min-h-[200px]">{{ partners_news_titles[5].title }}</div>
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[5].title }}</h3>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li v-if="partners_news_titles[6]"
-                            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            class="relative col-span-1 row-span-2 rounded-lg shadow-lg hover:scale-105 sm:hidden"
+                            :style="{ background: `url(${partners_news_titles[6].image}) center center no-repeat` }">
                             <a href="#">
-                                <div class="min-h-[200px]">{{ partners_news_titles[6].title }}</div>
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[6].title }}</h3>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li v-if="partners_news_titles[7]"
-                            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            class="relative col-span-1 row-span-1 rounded-lg shadow-lg hover:scale-105 sm:hidden"
+                            :style="{ background: `url(${partners_news_titles[7].image}) center center no-repeat` }">
                             <a href="#">
-                                <div class="min-h-[200px]">{{ partners_news_titles[7].title }}</div>
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[7].title }}</h3>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li v-if="partners_news_titles[8]"
-                            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            class="relative col-span-1 row-span-2 rounded-lg shadow-lg hover:scale-105 sm:hidden"
+                            :style="{ background: `url(${partners_news_titles[8].image}) center center no-repeat` }">
                             <a href="#">
-                                <div class="min-h-[200px]">{{ partners_news_titles[8].title }}</div>
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[8].title }}</h3>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li v-if="partners_news_titles[9]"
-                            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            class="relative col-span-1 row-span-1 rounded-lg shadow-lg hover:scale-105 sm:hidden"
+                            :style="{ background: `url(${partners_news_titles[9].image}) center center no-repeat` }">
                             <a href="#">
-                                <div class="min-h-[200px]">{{ partners_news_titles[9].title }}</div>
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[9].title }}</h3>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li v-if="partners_news_titles[10]"
-                            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            class="relative col-span-1 row-span-1 rounded-lg shadow-lg hover:scale-105 sm:hidden"
+                            :style="{ background: `url(${partners_news_titles[10].image}) center center no-repeat` }">
                             <a href="#">
-                                <div class="min-h-[200px]">{{ partners_news_titles[10].title }}</div>
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[10].title }}</h3>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                     </ul>
                     <div class="flex justify-center mt-3">
                         <button class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover">
                             Все новости
+                            <!-- TODO: pagination -->
                         </button>
                     </div>
                 </div>
@@ -554,5 +602,9 @@ footer {
 .main-letter {
 
     /* transform: rotateZ(5deg); */
+}
+
+.our-partners-news-list li {
+    background-size: cover;
 }
 </style>
