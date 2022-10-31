@@ -3,7 +3,7 @@
     <Head title="Сырный саммит" />
 
     <header class="relative">
-        <div class="container mx-auto">
+        <div class="container mx-auto max-w-7xl">
             <nav class="flex items-center justify-between -mt-20 sm:-mt-14">
                 <!-- Logo -->
                 <a href="#" class="flex flex-col items-center justify-center -mt-8 -ml-8 sm:-ml-20">
@@ -99,119 +99,133 @@
         </svg>
     </header>
     <main>
-        <section class="container relative bg-mainbg features">
-            <h3 class="max-w-2xl text-3xl font-black tracking-wider text-center text-secondary">
-                На прошедших саммитах
-            </h3>
-            <div class="grid grid-cols-3 gap-10 mt-14 sm:grid-cols-1">
-                <div class="flex flex-col items-center justify-center">
-                    <IconS1 class="md:w-[100px] sm:w-[70px] mx-auto" />
-                    <h5 class="max-w-2xl text-xl font-black tracking-wider text-secondary">
-                        более
-                    </h5>
-                    <p class="max-w-2xl text-5xl font-black tracking-wider text-secondary">
-                        100
-                    </p>
-                    <p class="max-w-2xl text-xl font-black tracking-wider text-secondary">
-                        сыроварен
-                    </p>
-                </div>
-                <div class="flex flex-col justify-center">
-                    <IconS2 class="md:w-[100px] sm:w-[70px] mx-auto" />
-                    <h3 class="max-w-2xl text-3xl font-black tracking-wider text-center text-secondary">
-                        более 400 сортов сыра
-                    </h3>
-                </div>
-                <div class="flex flex-col">
-                    <IconS3 class="md:w-[100px] sm:w-[70px] mx-auto" />
-                    <h3 class="max-w-2xl mx-auto text-3xl font-black tracking-wider text-center text-secondary">
-                        более 200 рецептов сырных блюд
-                    </h3>
+        <section class="bg-mainbg">
+            <div class="container relative max-w-7xl features">
+                <h3 class="max-w-2xl text-3xl font-black tracking-wider text-center text-secondary">
+                    На прошедших саммитах
+                </h3>
+                <div class="grid grid-cols-3 gap-10 mt-24 sm:grid-cols-1">
+                    <div class="flex flex-col items-center justify-center">
+                        <IconS1 class="h-[120px] sm:w-[70px] mx-auto" />
+                        <h5 class="max-w-2xl text-xl font-black tracking-wider text-secondary">
+                            более
+                        </h5>
+                        <p class="max-w-2xl text-4xl font-black tracking-wider text-secondary">
+                            100
+                        </p>
+                        <p class="max-w-2xl text-xl font-black tracking-wider text-secondary">
+                            сыроварен
+                        </p>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <IconS2 class="h-[120px] sm:w-[70px] mx-auto" />
+                        <h3 class="max-w-2xl text-2xl font-black tracking-wider text-center text-secondary">
+                            более 400 сортов сыра
+                        </h3>
+                    </div>
+                    <div class="flex flex-col">
+                        <IconS3 class="h-[120px] sm:w-[70px] mx-auto" />
+                        <h3 class="max-w-2xl mx-auto text-2xl font-black tracking-wider text-center text-secondary">
+                            более 200 рецептов сырных блюд
+                        </h3>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- News -->
-        <section class="news bg-darkbg" id="news">
+        <section class="bg-darkbg">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#fdffb6" fill-opacity="1"
                     d="M0,224L60,197.3C120,171,240,117,360,128C480,139,600,213,720,229.3C840,245,960,203,1080,181.3C1200,160,1320,160,1380,160L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
                 </path>
             </svg>
-            <div class="container">
-                <h3 class="max-w-2xl text-3xl font-black tracking-wider text-center text-secondary">
-                    Новости наших партнеров
-                </h3>
+            <div class="mx-auto max-w-7xl news" id="news">
+                <div class="container">
+                    <h3 class="max-w-2xl text-3xl font-black tracking-wider text-center text-secondary">
+                        Новости наших партнеров
+                    </h3>
 
-                <ul class="grid grid-cols-4 grid-rows-4 gap-4 mt-5 sm:grid-cols-1 md:grid-cols-2">
-                    <li class="relative col-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105">
-                        <a href="#">
-                            <div class="min-h-[200px]">
-                                <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
-                                    <h3 class="text-primary">{{ partners_news_titles[0].title }}</h3>
+                    <ul class="grid grid-cols-4 grid-rows-4 gap-4 mt-5 sm:grid-cols-1 lg:grid-cols-2">
+                        <li v-if="partners_news_titles[0]"
+                            class="relative col-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105">
+                            <a href="#">
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[0].title }}</h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li
-                        class="relative col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:row-span-1">
-                        <a href="#">
-                            <div class="min-h-[200px]">
-                                <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
-                                    <h3 class="text-primary">{{ partners_news_titles[1].title }}</h3>
+                            </a>
+                        </li>
+                        <li v-if="partners_news_titles[1]"
+                            class="relative col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:row-span-1">
+                            <a href="#">
+                                <div class="min-h-[200px]">
+                                    <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
+                                        <h3 class="text-primary">{{ partners_news_titles[1].title }}</h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105">
-                        <a href="#">
-                            <div class="min-h-[200px]">{{ partners_news_titles[2].title }}</div>
-                        </a>
-                    </li>
-                    <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105">
-                        <a href="#">
-                            <div class="min-h-[200px]">{{ partners_news_titles[3].title }}</div>
-                        </a>
-                    </li>
-                    <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
-                        <a href="#">
-                            <div class="min-h-[200px]">{{ partners_news_titles[4].title }}</div>
-                        </a>
-                    </li>
-                    <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
-                        <a href="#">
-                            <div class="min-h-[200px]">{{ partners_news_titles[5].title }}</div>
-                        </a>
-                    </li>
-                    <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
-                        <a href="#">
-                            <div class="min-h-[200px]">{{ partners_news_titles[6].title }}</div>
-                        </a>
-                    </li>
-                    <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
-                        <a href="#">
-                            <div class="min-h-[200px]">{{ partners_news_titles[7].title }}</div>
-                        </a>
-                    </li>
-                    <li class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
-                        <a href="#">
-                            <div class="min-h-[200px]">{{ partners_news_titles[8].title }}</div>
-                        </a>
-                    </li>
-                    <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
-                        <a href="#">
-                            <div class="min-h-[200px]">{{ partners_news_titles[9].title }}</div>
-                        </a>
-                    </li>
-                    <li class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
-                        <a href="#">
-                            <div class="min-h-[200px]">{{ partners_news_titles[10].title }}</div>
-                        </a>
-                    </li>
-                </ul>
-                <div class="flex justify-center mt-3">
-                    <button class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover">
-                        Все новости
-                    </button>
+                            </a>
+                        </li>
+                        <li v-if="partners_news_titles[2]"
+                            class="row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105">
+                            <a href="#">
+                                <div class="min-h-[200px]">{{ partners_news_titles[2].title }}</div>
+                            </a>
+                        </li>
+                        <li v-if="partners_news_titles[3]"
+                            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105">
+                            <a href="#">
+                                <div class="min-h-[200px]">{{ partners_news_titles[3].title }}</div>
+                            </a>
+                        </li>
+                        <li v-if="partners_news_titles[4]"
+                            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            <a href="#">
+                                <div class="min-h-[200px]">{{ partners_news_titles[4].title }}</div>
+                            </a>
+                        </li>
+                        <li v-if="partners_news_titles[5]"
+                            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            <a href="#">
+                                <div class="min-h-[200px]">{{ partners_news_titles[5].title }}</div>
+                            </a>
+                        </li>
+                        <li v-if="partners_news_titles[6]"
+                            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            <a href="#">
+                                <div class="min-h-[200px]">{{ partners_news_titles[6].title }}</div>
+                            </a>
+                        </li>
+                        <li v-if="partners_news_titles[7]"
+                            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            <a href="#">
+                                <div class="min-h-[200px]">{{ partners_news_titles[7].title }}</div>
+                            </a>
+                        </li>
+                        <li v-if="partners_news_titles[8]"
+                            class="col-span-1 row-span-2 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            <a href="#">
+                                <div class="min-h-[200px]">{{ partners_news_titles[8].title }}</div>
+                            </a>
+                        </li>
+                        <li v-if="partners_news_titles[9]"
+                            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            <a href="#">
+                                <div class="min-h-[200px]">{{ partners_news_titles[9].title }}</div>
+                            </a>
+                        </li>
+                        <li v-if="partners_news_titles[10]"
+                            class="col-span-1 row-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105 sm:hidden">
+                            <a href="#">
+                                <div class="min-h-[200px]">{{ partners_news_titles[10].title }}</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="flex justify-center mt-3">
+                        <button class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover">
+                            Все новости
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -222,11 +236,11 @@
                     d="M0,224L60,197.3C120,171,240,117,360,128C480,139,600,213,720,229.3C840,245,960,203,1080,181.3C1200,160,1320,160,1380,160L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
                 </path>
             </svg>
-            <div class="container">
+            <div class="container max-w-7xl">
                 <h3 class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary">
                     О проекте
                 </h3>
-                <div class="grid grid-cols-2 mt-5 sm:grid-cols-1">
+                <div class="grid grid-cols-2 mt-5 lg:grid-cols-1">
                     <div class="p-10">
                         <p>
                             «Сырный Саммит» начался из-за впечатлений от путешествий. Друзья,
@@ -260,7 +274,7 @@
         </section>
         <!-- History -->
         <section id="history" class="bg-mainbg">
-            <div class="container">
+            <div class="container max-w-7xl">
                 <h3 class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary">
                     История сырных саммитов
                 </h3>
@@ -274,7 +288,7 @@
         </section>
         <!-- Media -->
         <section class="bg-darkbg">
-            <div class="container">
+            <div class="container max-w-7xl">
                 <h3 class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary">
                     СМИ о нас
                 </h3>
@@ -290,7 +304,7 @@
         </section>
         <!-- Contact -->
         <section class="bg-white">
-            <div class="container">
+            <div class="container max-w-7xl">
                 <h3 class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary">
                     Связаться с нами
                 </h3>
@@ -308,7 +322,7 @@
                     d="M0,96L60,128C120,160,240,224,360,213.3C480,203,600,117,720,96C840,75,960,117,1080,133.3C1200,149,1320,139,1380,133.3L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
                 </path>
             </svg>
-            <div class="container">
+            <div class="container max-w-7xl">
                 <div class="grid grid-cols-4 gap-8 px-6 py-8 text-xl md:grid-cols-2">
                     <div class="flex items-center justify-between md:hidden">
                         <!-- Logo -->
@@ -518,7 +532,7 @@ footer {
     /* backdrop-filter: blur(2px); */
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 992px) {
     .about-image {
         display: block;
     }
