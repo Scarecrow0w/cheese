@@ -19,7 +19,9 @@
     :modules="modules"
     class="mySwiper"
   >
-    <swiper-slide v-for="slide in mass_media_about_us_titles"
+    <swiper-slide
+        v-for="slide in mass_media_about_us_titles"
+        @click="redirectToLink(`/topic/${slide.id}`)"
         :key="slide.id"
         class="flex justify-center text-center">
         <img class="relative rounded-lg"
@@ -28,33 +30,6 @@
             <h3 class="text-primary">{{ slide.title }}</h3>
         </div>
     </swiper-slide >
-    <!-- <swiper-slide class="flex justify-center text-center"
-      ><img class="rounded-lg"
-        src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
-          <h3 class="text-primary">Новости дня</h3></div>
-          </swiper-slide
-    ><swiper-slide
-      ><img
-        src="https://swiperjs.com/demos/images/nature-3.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img
-        src="https://swiperjs.com/demos/images/nature-4.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img
-        src="https://swiperjs.com/demos/images/nature-5.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img
-        src="https://swiperjs.com/demos/images/nature-6.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img
-        src="https://swiperjs.com/demos/images/nature-7.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img
-        src="https://swiperjs.com/demos/images/nature-8.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img src="https://swiperjs.com/demos/images/nature-9.jpg"
-    /></swiper-slide> -->
   </swiper>
 </template>
 <script>
@@ -73,18 +48,23 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper";
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  props: {
-    mass_media_about_us_titles: Array,
-  },
-  setup() {
-    return {
-      modules: [EffectCoverflow, Pagination],
-    };
-  },
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    props: {
+        mass_media_about_us_titles: Array,
+    },
+    methods: {
+        redirectToLink(link) {
+            window.location = link;
+        }
+    },
+    setup() {
+        return {
+        modules: [EffectCoverflow, Pagination],
+        };
+    },
 };
 </script>
 

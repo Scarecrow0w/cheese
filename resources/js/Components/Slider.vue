@@ -24,104 +24,10 @@
       <div class="mt-3 text text-secondary" data-swiper-parallax="-100">
         <p>{{ story.content }}</p>
       </div>
-      <button class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover" >
+      <a :href="`/topic/${story.id}`" class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover" >
         Подробнее
-      </button>
+      </a>
     </swiper-slide>
-    <!-- <swiper-slide class="flex flex-col justify-center text-center">
-      <div class="title text-secondary" data-swiper-parallax="-300">
-        II Сырный саммит
-      </div>
-      <div class="mt-3 subtitle text-secondary" data-swiper-parallax="-200">
-        Прошел в январе 2016 года
-      </div>
-      <div class="mt-3 text text-secondary" data-swiper-parallax="-100">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-          laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-          Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-          Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper
-          velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut
-          libero. Aenean feugiat non eros quis feugiat.
-        </p>
-      </div>
-      <button
-        class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover"
-      >
-        Подробнее
-      </button>
-    </swiper-slide>
-    <swiper-slide class="flex flex-col justify-center text-center">
-      <div class="title text-secondary" data-swiper-parallax="-300">
-        III Сырный саммит
-      </div>
-      <div class="mt-3 subtitle text-secondary" data-swiper-parallax="-200">
-        Прошел в январе 2016 года
-      </div>
-      <div class="mt-3 text text-secondary" data-swiper-parallax="-100">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-          laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-          Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-          Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper
-          velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut
-          libero. Aenean feugiat non eros quis feugiat.
-        </p>
-      </div>
-      <button
-        class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover"
-      >
-        Подробнее
-      </button>
-    </swiper-slide>
-    <swiper-slide class="flex flex-col justify-center text-center">
-      <div class="title text-secondary" data-swiper-parallax="-300">
-        IV Сырный саммит
-      </div>
-      <div class="mt-3 subtitle text-secondary" data-swiper-parallax="-200">
-        Прошел в январе 2016 года
-      </div>
-      <div class="mt-3 text text-secondary" data-swiper-parallax="-100">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-          laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-          Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-          Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper
-          velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut
-          libero. Aenean feugiat non eros quis feugiat.
-        </p>
-      </div>
-      <button
-        class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover"
-      >
-        Подробнее
-      </button>
-    </swiper-slide>
-    <swiper-slide class="flex flex-col justify-center text-center">
-      <div class="title text-secondary" data-swiper-parallax="-300">
-        V Сырный саммит
-      </div>
-      <div class="mt-3 subtitle text-secondary" data-swiper-parallax="-200">
-        Прошел в январе 2016 года
-      </div>
-      <div class="mt-3 text text-secondary" data-swiper-parallax="-100">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-          laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-          Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-          Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper
-          velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut
-          libero. Aenean feugiat non eros quis feugiat.
-        </p>
-      </div>
-      <button class="px-6 py-3 mx-auto mt-5 rounded-lg bg-secondary text-lightbg hover:bg-hover">
-        Подробнее
-      </button>
-    </swiper-slide> -->
   </swiper>
 </template>
 <script>

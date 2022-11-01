@@ -76,7 +76,17 @@
     <main>
         <section class="bg-mainbg">
             <div class="container relative max-w-7xl features">
-
+                <h3 class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary">
+                    {{ topic.title }}
+                </h3>
+                <div class="grid grid-cols-2 mt-5 lg:grid-cols-1 min-h-[400px]">
+                    <div class="p-10">
+                        <p>{{ topic.content }}</p>
+                    </div>
+                    <div class="pt-10 about-image max-h-[400px]">
+                        <!-- <img src="../../images/cheesemaker.jpg" alt=""> -->
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Footer -->
@@ -243,21 +253,6 @@ footer {
     background: url("../../../images/cheesemaker.jpg");
     background-size: cover;
     display: none;
-}
-
-.about-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../../images/cheese_screen.jpg");
-    background-size: 110%;
-    background-position: center;
-    background-repeat: no-repeat;
-    mix-blend-mode: screen;
-    /* backdrop-filter: blur(2px); */
 }
 
 @media (min-width: 992px) {

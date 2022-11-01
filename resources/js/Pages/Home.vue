@@ -162,7 +162,8 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[0].id}`)"
                             class="relative col-span-1 rounded-lg shadow-lg bg-lightbg hover:scale-105"
                             :style="{ background: `url(${partners_news_titles.data[0].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[0].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[0].title }}</h3>
                                 </div>
@@ -172,7 +173,8 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[1].id}`)"
                             class="relative col-span-1 row-span-2 rounded-lg shadow-lg hover:scale-105 sm:row-span-1"
                             :style="{ background: `url(${partners_news_titles.data[1].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[1].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[1].title }}</h3>
                                 </div>
@@ -182,7 +184,8 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[2].id}`)"
                             class="relative row-span-1 rounded-lg shadow-lg hover:scale-105"
                             :style="{ background: `url(${partners_news_titles.data[2].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[2].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[2].title }}</h3>
                                 </div>
@@ -192,7 +195,8 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[3].id}`)"
                             class="relative col-span-1 row-span-2 rounded-lg shadow-lg hover:scale-105"
                             :style="{ background: `url(${partners_news_titles.data[3].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[3].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[3].title }}</h3>
                                 </div>
@@ -202,7 +206,8 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[4].id}`)"
                             class="relative col-span-1 row-span-1 rounded-lg shadow-lg hover:scale-105 sm:hidden"
                             :style="{ background: `url(${partners_news_titles.data[4].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[4].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[4].title }}</h3>
                                 </div>
@@ -212,7 +217,8 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[5].id}`)"
                             class="relative col-span-1 row-span-2 rounded-lg shadow-lg hover:scale-105 sm:hidden"
                             :style="{ background: `url(${partners_news_titles.data[5].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[5].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[5].title }}</h3>
                                 </div>
@@ -222,7 +228,8 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[6].id}`)"
                             class="relative col-span-1 row-span-2 rounded-lg shadow-lg hover:scale-105 sm:hidden"
                             :style="{ background: `url(${partners_news_titles.data[6].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[6].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[6].title }}</h3>
                                 </div>
@@ -232,7 +239,8 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[7].id}`)"
                             class="relative col-span-1 row-span-1 rounded-lg shadow-lg hover:scale-105 sm:hidden"
                             :style="{ background: `url(${partners_news_titles.data[7].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[7].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[7].title }}</h3>
                                 </div>
@@ -242,7 +250,8 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[8].id}`)"
                             class="relative col-span-1 row-span-2 rounded-lg shadow-lg hover:scale-105 sm:hidden"
                             :style="{ background: `url(${partners_news_titles.data[8].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[8].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[8].title }}</h3>
                                 </div>
@@ -252,7 +261,8 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[9].id}`)"
                             class="relative col-span-1 row-span-1 rounded-lg shadow-lg hover:scale-105 sm:hidden"
                             :style="{ background: `url(${partners_news_titles.data[9].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[9].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[9].title }}</h3>
                                 </div>
@@ -262,14 +272,15 @@
                             @click="redirectToLink(`/topic/${partners_news_titles.data[10].id}`)"
                             class="relative col-span-1 row-span-1 rounded-lg shadow-lg hover:scale-105 sm:hidden"
                             :style="{ background: `url(${partners_news_titles.data[10].image}) center center no-repeat` }">
-                            <div class="min-h-[200px]">
+                            <div v-if="partners_news_titles.data[10].title "
+                                class="min-h-[200px]">
                                 <div class="absolute bottom-0 w-full rounded-b-lg h-1/3 bg-secondary">
                                     <h3 class="text-primary">{{ partners_news_titles.data[10].title }}</h3>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <div class="flex justify-center mt-3">
+                    <div class="flex justify-center mt-8">
                         <Pagination :links="partners_news_titles.links" />
                     </div>
                 </div>
@@ -473,10 +484,7 @@ export default {
         redirectToLink(link) {
             window.location = link;
         }
-    },
-    mounted() {
-        console.log(this.partners_news_titles.links);
-    },
+    }
 };
 </script>
 
