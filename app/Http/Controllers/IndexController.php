@@ -14,7 +14,7 @@ class IndexController extends Controller
         $partners_news_titles = Topic::whereType('partners_news')
             ->latest()
             ->paginate(11)
-            ->map(function($topic) {
+            ->through(function($topic) {
                 if ($topic->image && Storage::disk('public')->exists($topic->image)) {
                     $image = asset('storage/'.$topic->image);
                 }

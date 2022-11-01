@@ -76,7 +76,14 @@ class TopicController extends Controller
      */
     public function show(Topic $topic)
     {
-        //
+        if ($topic->image && Storage::disk('public')->exists($topic->image)) {
+            $image = asset('storage/'.$topic->image);
+        }
+
+        return Inertia::render('Topics/Show', [
+            'topic' => $topic,
+            'image' => $image ?? ''
+        ]);
     }
 
     /**

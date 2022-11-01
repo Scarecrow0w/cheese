@@ -28,7 +28,8 @@ use Inertia\Inertia;
 // });
 
 Route::get('/', [IndexController::class, 'index'])->name('home');
-Route::get('/about', [IndexController::class, 'about'])->name('about');
+// Route::get('/about', [IndexController::class, 'about'])->name('about');
+Route::get('/topic/{topic}', [TopicController::class, 'show'])->name('topics.show');
 
 Route::middleware(['auth', 'admin'])
     ->prefix('dashboard')

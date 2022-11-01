@@ -1,17 +1,9 @@
 <template>
   <nav
-    class="
-      relative
-      z-0
-      inline-flex
-      justify-center
-      rounded-md
-      shadow-sm
-      
-    "
+    class="relative z-0 inline-flex justify-center rounded-md shadow-sm "
     aria-label="Pagination"
   >
-  
+
     <Link
       v-for="(link, key) in links"
       :key="key"
@@ -20,23 +12,10 @@
       :disabled ="link.url === null"
       :class="{'bg-indigo-50 border border-indigo-500 text-indigo-600 text-sm' : link.active}"
       aria-current="page"
-      class="
-        bg-white
-        border-gray-300
-        text-gray-500
-        hover:bg-gray-50
-        relative
-        inline-flex
-        items-center
-        px-4
-        py-2
-        border
-        text-sm
-        font-medium
-    "      
+      class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300  hover:bg-gray-50"
     />
-    <!-- <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"> 2 </a> -->
-    <!-- class="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium" -->
+    <!-- <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 hover:bg-gray-50"> 2 </a> -->
+    <!-- class="relative z-10 inline-flex items-center px-4 py-2 text-sm font-medium text-indigo-600 border border-indigo-500 bg-indigo-50" -->
   </nav>
 </template>
 
