@@ -16,16 +16,16 @@
                 <!-- Navigation desktop -->
                 <ul class="flex gap-12 text-xl font-medium text-secondary lg:text-base md:hidden">
                     <li>
-                        <a href="#news" class="hover:border-b-4 border-secondary">Новости</a>
+                        <a href="/#news" class="hover:border-b-4 border-secondary">Новости</a>
                     </li>
                     <li>
-                        <a href="#about" class="hover:border-b-4 border-secondary">О проекте</a>
+                        <a href="/#about" class="hover:border-b-4 border-secondary">О проекте</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:border-b-4 border-secondary">СМИ о нас</a>
+                        <a href="/#mass_media_about_us" class="hover:border-b-4 border-secondary">СМИ о нас</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:border-b-4 border-secondary">Контакты</a>
+                        <a href="/#contacts" class="hover:border-b-4 border-secondary">Контакты</a>
                     </li>
                     <li>
                         <a :href="route('login')" class="hover:border-b-4 border-secondary">Войти</a>
@@ -344,7 +344,7 @@
             </svg>
         </section>
         <!-- Media -->
-        <section class="bg-darkbg">
+        <section class="bg-darkbg mass_media_about_us" id="mass_media_about_us">
             <div class="container max-w-7xl">
                 <h3 class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary">
                     СМИ о нас
@@ -360,16 +360,31 @@
             </svg>
         </section>
         <!-- Contact -->
-        <section class="bg-white">
+        <section class="bg-white contacts" id="contacts">
             <div class="container max-w-7xl">
                 <h3 class="max-w-2xl text-3xl font-black tracking-wider text-start text-secondary">
                     Связаться с нами
                 </h3>
                 <div class="relative mx-auto main-letter top-24">
-                    <Contact />
+                    <form action="/sendmail" method="POST">
+                        <div class="flex items-center justify-center">
+                            <div class="z-20 px-16 py-16 bg-white shadow-xl rounded-2xl">
+                                <div>
+                                    <h1 class="mb-4 text-3xl font-bold text-center cursor-pointer">Напишите нам</h1>
+                                </div>
+                                <div class="space-y-4">
+                                    <input type="text" placeholder="Ваш email" class="block w-full px-4 py-3 text-sm border rounded-lg outline-none" />
+                                    <textarea class="block w-full px-4 py-3 text-sm border rounded-lg outline-none"></textarea>
+                                </div>
+                                <div class="mt-6 text-center">
+                                    <button class="w-64 py-3 text-xl text-lightbg bg-secondary rounded-2xl">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <Icons />
             </div>
+            <Icons />
         </section>
         <!-- /Contact -->
         <!-- Footer -->

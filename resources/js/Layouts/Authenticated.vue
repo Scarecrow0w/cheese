@@ -20,12 +20,11 @@ const showingNavigationDropdown = ref(false);
                     <div class="flex justify-between h-16">
                         <div class="flex">
                             <!-- Logo -->
-                            <!-- <div class="flex items-center shrink-0">
-                                <Link :href="route('dashboard')">
-                                    <Logo />
-                                    <BreezeApplicationLogo class="block w-auto h-9" />
+                            <div class="flex items-center shrink-0">
+                                <Link href="/">
+                                    Главная
                                 </Link>
-                            </div> -->
+                            </div>
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">

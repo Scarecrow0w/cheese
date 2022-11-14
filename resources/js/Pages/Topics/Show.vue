@@ -15,16 +15,16 @@
                 <!-- Navigation desktop -->
                 <ul class="flex gap-12 text-xl font-medium text-secondary lg:text-base md:hidden">
                     <li>
-                        <a href="#news" class="hover:border-b-4 border-secondary">Новости</a>
+                        <a href="/#news" class="hover:border-b-4 border-secondary">Новости</a>
                     </li>
                     <li>
-                        <a href="#about" class="hover:border-b-4 border-secondary">О проекте</a>
+                        <a href="/#about" class="hover:border-b-4 border-secondary">О проекте</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:border-b-4 border-secondary">СМИ о нас</a>
+                        <a href="/#mass_media_about_us" class="hover:border-b-4 border-secondary">СМИ о нас</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:border-b-4 border-secondary">Контакты</a>
+                        <a href="/#contacts" class="hover:border-b-4 border-secondary">Контакты</a>
                     </li>
                     <li>
                         <a :href="route('login')" class="hover:border-b-4 border-secondary">Войти</a>

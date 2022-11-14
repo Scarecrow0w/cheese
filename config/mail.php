@@ -36,13 +36,17 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'host' => env('MAIL_HOST', 'smtp.yandex.ru'),
             'port' => env('MAIL_PORT', 587),
+            'from' => [
+                'address' => 'syrniy.sammit@yandex.ru',
+                'name' => 'сырныйсаммит.рф',
+            ],
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'username' => env('MAIL_USERNAME', 'dev@plinskiy.site'),
+            'password' => env('MAIL_PASSWORD', 'edycjqzykryvqtsq'),
             'timeout' => null,
-            'local_domain' => env('MAIL_EHLO_DOMAIN'),
+            'auth_mode' => null,
         ],
 
         'ses' => [
