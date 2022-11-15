@@ -366,15 +366,15 @@
                     Связаться с нами
                 </h3>
                 <div class="relative mx-auto main-letter top-24">
-                    <form action="/sendmail" method="POST">
+                    <form @submit.prevent="submit">
                         <div class="flex items-center justify-center">
                             <div class="z-20 px-16 py-16 bg-white shadow-xl rounded-2xl">
                                 <div>
                                     <h1 class="mb-4 text-3xl font-bold text-center cursor-pointer">Напишите нам</h1>
                                 </div>
                                 <div class="space-y-4">
-                                    <input type="text" placeholder="Ваш email" class="block w-full px-4 py-3 text-sm border rounded-lg outline-none" />
-                                    <textarea class="block w-full px-4 py-3 text-sm border rounded-lg outline-none"></textarea>
+                                    <input v-model="form.email" type="text" placeholder="Ваш email" class="block w-full px-4 py-3 text-sm border rounded-lg outline-none" />
+                                    <textarea v-model="form.text" class="block w-full px-4 py-3 text-sm border rounded-lg outline-none"></textarea>
                                 </div>
                                 <div class="mt-6 text-center">
                                     <button class="w-64 py-3 text-xl text-lightbg bg-secondary rounded-2xl">Отправить</button>
@@ -459,7 +459,7 @@
 
 <script>
 // import MainLayout from '@/Layouts/MainLayout.vue'
-import { Head } from "@inertiajs/inertia-vue3";
+import { Head, useForm } from "@inertiajs/inertia-vue3";
 import Logo from "../Components/Logo.vue";
 import IconS1 from "@/Components/IconS1.vue";
 import IconS2 from "../Components/IconS2.vue";
@@ -493,11 +493,18 @@ export default {
     data() {
         return {
             menuActive: false,
+            form: useForm({
+                email: null,
+                text: null,
+            })
         };
     },
     methods: {
         redirectToLink(link) {
             window.location = link;
+        },
+        submit() {
+            this.form.post("/send_mail");
         }
     }
 };

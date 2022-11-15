@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\SendMailController;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
@@ -30,6 +31,7 @@ use Inertia\Inertia;
 Route::get('/', [IndexController::class, 'index'])->name('home');
 // Route::get('/about', [IndexController::class, 'about'])->name('about');
 Route::get('/topic/{topic}', [TopicController::class, 'show'])->name('topics.show');
+Route::post('/send_mail', [SendMailController::class, 'send'])->name('send_mail');
 
 Route::middleware(['auth', 'admin'])
     ->prefix('dashboard')

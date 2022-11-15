@@ -10,6 +10,13 @@ class SendMailController extends Controller
 {
     public function send(Request $request)
     {
-        Mail::to($request->user())->send(new Contact());
+        $data = [
+            'user_email' => $request->email,
+            'text' => $request->text,
+        ];
+
+        Mail::to('daniil6547@ya.ru')->send(new Contact($data));
+
+        return back();
     }
 }
