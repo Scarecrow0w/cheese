@@ -83,8 +83,7 @@
                     <div class="p-10">
                         <p>{{ topic.content }}</p>
                     </div>
-                    <div class="pt-10 about-image max-h-[400px]">
-                        <!-- <img src="../../images/cheesemaker.jpg" alt=""> -->
+                    <div class="pt-10 about-image max-h-[400px]" :style="{ backgroundImage: `url('${image}')` }">
                     </div>
                 </div>
             </div>
@@ -250,7 +249,6 @@ footer {
 .about-image {
     position: relative;
     width: 100%;
-    background: url("../../../images/cheesemaker.jpg");
     background-size: cover;
     display: none;
 }

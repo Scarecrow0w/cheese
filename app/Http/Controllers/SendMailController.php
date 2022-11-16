@@ -2,19 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SendMailRequest;
 use App\Mail\Contact;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class SendMailController extends Controller
 {
-    public function send(Request $request)
+    public function send(SendMailRequest $request)
     {
-        $request->validate([
-            'email' => 'required|email',
-            'text' => 'required|string',
-        ]);
-
         $data = [
             'user_email' => $request->email,
             'text' => $request->text,
@@ -22,6 +17,6 @@ class SendMailController extends Controller
 
         Mail::to('syrniy.sammit@yandex.ru')->send(new Contact($data));
 
-        return back();
+        return back()->with('message', 'Сообщение отправлено');
     }
 }

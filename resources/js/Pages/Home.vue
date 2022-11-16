@@ -374,10 +374,15 @@
                                 </div>
                                 <div class="space-y-4">
                                     <input required v-model="form.email" type="text" placeholder="Ваш email" class="block w-full px-4 py-3 text-sm border rounded-lg outline-none" />
+                                    <small v-if="form.errors.email" class="text-red-500">{{ form.errors.email }}</small>
                                     <textarea required v-model="form.text" class="block w-full px-4 py-3 text-sm border rounded-lg outline-none"></textarea>
+                                    <small v-if="form.errors.text" class="text-red-500">{{ form.errors.text }}</small>
                                 </div>
                                 <div class="mt-6 text-center">
                                     <button class="w-64 py-3 text-xl text-lightbg bg-secondary rounded-2xl">Отправить</button>
+                                </div>
+                                <div v-if="$page.props.flash.message" class="w-64 p-4 mt-6 text-center text-green-900 bg-green-200 rounded-2xl">
+                                    {{ $page.props.flash.message }}
                                 </div>
                             </div>
                         </div>
@@ -504,7 +509,9 @@ export default {
             window.location = link;
         },
         submit() {
-            this.form.post("/send_mail");
+            this.form.post("/send_mail", {
+                onSuccess: () => this.form.reset()
+            });
         }
     }
 };
