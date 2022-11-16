@@ -20,7 +20,7 @@ class SendMailController extends Controller
             'text' => $request->text,
         ];
 
-        Mail::to('daniil6547@ya.ru')->send(new Contact($data));
+        Mail::to('syrniy.sammit@yandex.ru')->send(new Contact($data));
 
         return back();
     }
