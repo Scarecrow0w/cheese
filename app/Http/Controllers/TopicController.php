@@ -30,6 +30,7 @@ class TopicController extends Controller
                     'content' => $topic->content,
                     'image' =>  $image ?? null,
                     'type' => $topic->type,
+                    'foreign_link' => $topic->foreign_link,
                 ];
             })
         ]);
@@ -63,6 +64,7 @@ class TopicController extends Controller
             'content' => $request->content,
             'image' => $fileName ?? null,
             'type' => $request->type,
+            'foreign_link' => $request->foreign_link,
         ]);
 
         return to_route('topics.index');
@@ -121,6 +123,7 @@ class TopicController extends Controller
             'content' => $request->content,
             'image' => $fileName,
             'type' => $request->type,
+            'foreign_link' => $request->foreign_link,
         ]);
 
         return to_route('topics.index');

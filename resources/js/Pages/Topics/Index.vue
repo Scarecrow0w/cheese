@@ -24,6 +24,7 @@
                                 <th scope="col" class="px-6 py-3">Изображение</th>
                                 <th scope="col" class="px-6 py-3">Контент</th>
                                 <th scope="col" class="px-6 py-3">Тип блока</th>
+                                <th scope="col" class="px-6 py-3">Ссылка</th>
                                 <th scope="col" class="px-6 py-3">
                                     <span class="sr-only">Редактировать</span>
                                 </th>
@@ -44,6 +45,9 @@
                                 </td>
                                 <td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
                                     {{ topic.type }}
+                                </td>
+                                <td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                    {{ topic.foreign_link }}
                                 </td>
                                 <td class="px-6 py-4 text-right">
                                     <Link :href="`/dashboard/topics/${topic.id}/edit`" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">

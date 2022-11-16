@@ -62,6 +62,7 @@ class IndexController extends Controller
                     'content' => $topic->content,
                     'image' =>  $image ?? null,
                     'type' => $topic->type,
+                    'foreign_link' => $topic->foreign_link,
                 ];
             });
 

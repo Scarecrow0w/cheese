@@ -21,7 +21,7 @@
   >
     <swiper-slide
         v-for="slide in mass_media_about_us_titles"
-        @click="redirectToLink(`/topic/${slide.id}`)"
+        @click="redirectToLink(slide.foreign_link ?? `/topic/${slide.id}`)"
         :key="slide.id"
         class="flex justify-center text-center">
         <img class="relative rounded-lg"
