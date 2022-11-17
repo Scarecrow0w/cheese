@@ -15,7 +15,7 @@ class SendMailController extends Controller
             'text' => $request->text,
         ];
 
-        Mail::to('syrniy.sammit@yandex.ru')->send(new Contact($data));
+        Mail::to(config('settings.admin_email'))->send(new Contact($data));
 
         return back()->with('message', 'Сообщение отправлено');
     }

@@ -42,21 +42,20 @@
                     items-center"
                     :class="{ hidden: !menuActive }">
                     <li>
-                        <a href="#"
-                            class="block py-4 duration-300 ease-in text-darkbg hover:scale-150 hover:text-lightbg">About</a>
+                        <a href="/#news"
+                            class="block py-4 duration-300 ease-in text-darkbg hover:scale-150 hover:text-lightbg">Новости</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-4 duration-300 ease-in text-lightbg hover:scale-150">Services</a>
+                        <a href="/#about" class="block py-4 duration-300 ease-in text-lightbg hover:scale-150">О проекте</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-4 duration-300 ease-in text-lightbg hover:scale-150">Case
-                            Studies</a>
+                        <a href="/#mass_media_about_us" class="block py-4 duration-300 ease-in text-lightbg hover:scale-150">СМИ о нас</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-4 duration-300 ease-in text-lightbg hover:scale-150">Careers</a>
+                        <a href="/#contacts" class="block py-4 duration-300 ease-in text-lightbg hover:scale-150">Контакты</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-4 duration-300 ease-in text-lightbg hover:scale-150">Blog</a>
+                        <a :href="route('login')" class="block py-4 duration-300 ease-in text-lightbg hover:scale-150">Войти</a>
                     </li>
                 </ul>
                 <!-- Burger button -->
